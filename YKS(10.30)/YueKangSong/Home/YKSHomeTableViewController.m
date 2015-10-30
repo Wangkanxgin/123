@@ -26,6 +26,7 @@
 #import "YKSAddAddressVC.h"
 #import "YKSDrugDetailViewController.h"
 #import "YKSMyAddressViewcontroller.h"
+#import "YKSHomeTableViewCell1.h"
 
 @interface YKSHomeTableViewController () <ImagePlayerViewDelegate,UIAlertViewDelegate,UIScrollViewDelegate>
 
@@ -623,6 +624,19 @@
 
 #pragma mark - UITableViewdelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.section == 0&&indexPath.row==0) {
+//        
+//        return 170;
+//    }
+//    
+//    else if (indexPath.section==0&&indexPath.row==1){
+//        
+//        return 50;
+//    }
+//    else {
+//        return 84;
+//    }
+    
     if (indexPath.section == 0) {
         return 50;
     } else if (indexPath.section == 1) {
@@ -633,7 +647,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (section == 1) {
+    if (section == 0) {
         UIView *aView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
         aView.backgroundColor = [UIColor clearColor];
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH - 30, 20)];
@@ -649,7 +663,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 1) {
+    if (section == 0) {
         return 26.0f;
     }
     return 0.0;
@@ -664,13 +678,40 @@
     if (section == 0) {
         return 1;
     } else if (section == 1) {
-        return _datas.count < 1 ? 1 : _datas.count;
+                return _datas.count < 1 ? 1 : _datas.count;
+        
     } else {
         return 1;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+//    
+//        if (indexPath.section == 0) {
+//            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell1" forIndexPath:indexPath];
+//            return cell;
+//        } else if (indexPath.section == 1) {
+//            NSDictionary *dic;
+//            if (_datas.count > indexPath.row) {
+//                dic = _datas[indexPath.row];
+//            }
+//            NSString *displaylayout = dic[@"displaylayout"];
+//            NSString *identifier = [NSString stringWithFormat:@"homeSpecial%@", displaylayout ? displaylayout : @"1"];
+//            YKSHomeListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+//            if (dic) {
+//                [cell setHomeListInfo:dic];
+//            }
+//            cell.tapAction = ^(YKSSpecial *special){
+//                [self performSegueWithIdentifier:@"gotoSplecialList" sender:special];
+//            };
+//            return cell;
+//        } else {
+//            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" forIndexPath:indexPath];
+//            return cell;
+//        }
+    
+    
     if (indexPath.section == 0) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell1" forIndexPath:indexPath];
         return cell;
@@ -693,6 +734,8 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" forIndexPath:indexPath];
         return cell;
     }
+
+    
 }
 
 #pragma mark - UITableViewDelegate
@@ -712,7 +755,7 @@
 }
 
 - (void)imagePlayerView:(ImagePlayerView *)imagePlayerView didTapAtIndex:(NSInteger)index {
-   
+    
     if (![YKSUserModel isLogin]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"未登录"
                                                         message:@"请登录后查看"
@@ -744,7 +787,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIViewController *aa = segue.destinationViewController;
     aa.hidesBottomBarWhenPushed = YES;
-
+    
     
     if ([segue.identifier isEqualToString:@"gotoSplecialList"]) {
         YKSSubSpecialListTableViewController *vc = segue.destinationViewController;
@@ -769,12 +812,12 @@
                                           UIStoryboard *mainBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
                                           YKSDrugDetailViewController *vc = [mainBoard instantiateViewControllerWithIdentifier:@"YKSDrugDetailViewController"];
                                           
-                                          // 扫码 跳转 详情界面 
+                                          // 扫码 跳转 详情界面
                                           vc.drugInfo=responseObject[@"data"][@"glist"][0];
-//                                          vc.datas = responseObject[@"data"][@"glist"];
+                                          //                                          vc.datas = responseObject[@"data"][@"glist"];
                                           vc.hidesBottomBarWhenPushed = YES;
-//                                          vc.drugListType = YKSDrugListTypeSearchKey;
-//                                          vc.title = @"药品";
+                                          //                                          vc.drugListType = YKSDrugListTypeSearchKey;
+                                          //                                          vc.title = @"药品";
                                           [self.navigationController pushViewController:vc animated:YES];
                                       }
                                   } else {
@@ -788,8 +831,6 @@
     }
     
 }
-
-
 
 
 @end

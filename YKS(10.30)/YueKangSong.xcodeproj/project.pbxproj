@@ -99,6 +99,7 @@
 		576CFB201BD9FC7B008D7247 /* back1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 576CFB1F1BD9FC7B008D7247 /* back1@2x.png */; settings = {ASSET_TAGS = (); }; };
 		576CFB221BD9FC7F008D7247 /* back1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 576CFB211BD9FC7F008D7247 /* back1@3x.png */; settings = {ASSET_TAGS = (); }; };
 		576D7A181BAAA86400FFE1AE /* YKSNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 576D7A171BAAA86400FFE1AE /* YKSNetWorkManager.m */; };
+		578D81A81BE30D1700DCFF4B /* YKSHomeTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 578D81A61BE30D1700DCFF4B /* YKSHomeTableViewCell1.m */; settings = {ASSET_TAGS = (); }; };
 		57A440B31BDF6F8800821AE4 /* dingwei@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57A440B11BDF6F8800821AE4 /* dingwei@2x.png */; settings = {ASSET_TAGS = (); }; };
 		57A440B41BDF6F8800821AE4 /* dingwei@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57A440B21BDF6F8800821AE4 /* dingwei@3x.png */; settings = {ASSET_TAGS = (); }; };
 		57A4B9781BD8B27500EE29FC /* xiajiantou@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57A4B9771BD8B27500EE29FC /* xiajiantou@3x.png */; settings = {ASSET_TAGS = (); }; };
@@ -360,6 +361,8 @@
 		576CFB211BD9FC7F008D7247 /* back1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back1@3x.png"; sourceTree = "<group>"; };
 		576D7A161BAAA86400FFE1AE /* YKSNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSNetWorkManager.h; sourceTree = "<group>"; };
 		576D7A171BAAA86400FFE1AE /* YKSNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSNetWorkManager.m; sourceTree = "<group>"; };
+		578D81A61BE30D1700DCFF4B /* YKSHomeTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSHomeTableViewCell1.m; sourceTree = "<group>"; };
+		578D81A71BE30D1700DCFF4B /* YKSHomeTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSHomeTableViewCell1.h; sourceTree = "<group>"; };
 		57A440B11BDF6F8800821AE4 /* dingwei@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dingwei@2x.png"; sourceTree = "<group>"; };
 		57A440B21BDF6F8800821AE4 /* dingwei@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dingwei@3x.png"; sourceTree = "<group>"; };
 		57A4B9771BD8B27500EE29FC /* xiajiantou@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiajiantou@3x.png"; sourceTree = "<group>"; };
@@ -663,6 +666,8 @@
 		3E89054E1B0390C100ACF5AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				578D81A61BE30D1700DCFF4B /* YKSHomeTableViewCell1.m */,
+				578D81A71BE30D1700DCFF4B /* YKSHomeTableViewCell1.h */,
 				3E89053F1B033C3100ACF5AD /* YKSSpecialView.h */,
 				3E8905401B033C3100ACF5AD /* YKSSpecialView.m */,
 				3E958EC01B145BA000A18783 /* YKSSearchBar.h */,
@@ -1277,6 +1282,7 @@
 				3E9C465F1B08399D009CAC1D /* YKSAddressListViewController.m in Sources */,
 				3E9C45F41B046635009CAC1D /* YKSSubSpecialCell.m in Sources */,
 				F3499F8E1B9D204700B5D07B /* YKSUserViewController.m in Sources */,
+				578D81A81BE30D1700DCFF4B /* YKSHomeTableViewCell1.m in Sources */,
 				3178B8D41BA6B4C700B390E4 /* YKSCityModel.m in Sources */,
 				F3D4B0B81B86B35400387F98 /* Foundation+Log.m in Sources */,
 				57C284A61BBB84490038AED9 /* FMResultSet.m in Sources */,

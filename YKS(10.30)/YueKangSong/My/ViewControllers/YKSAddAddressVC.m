@@ -221,6 +221,8 @@
                                             return ;
                                         }
                                         if (ServerSuccess(responseObject)) {
+                                            
+                                            
 
                                             if ([responseObject[@"data"][@"sendable"] boolValue]) {
                                                 [self.navigationController showToastMessage:@"添加成功"];
