@@ -27,6 +27,7 @@
 #import "YKSDrugDetailViewController.h"
 #import "YKSMyAddressViewcontroller.h"
 #import "YKSHomeTableViewCell1.h"
+#import "YKSDrugCategoryListVC.h"
 
 @interface YKSHomeTableViewController () <ImagePlayerViewDelegate,UIAlertViewDelegate,UIScrollViewDelegate>
 
@@ -638,22 +639,29 @@
 //    }
     
     if (indexPath.section == 0) {
-        return 50;
-    } else if (indexPath.section == 1) {
+        if (indexPath.row==2) {
+            return 50;
+        }
+        
         return 76;
+    } else if (indexPath.section == 1) {
+        return 56*4;
     } else {
         return 76;
     }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == 0||section==1) {
         UIView *aView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
         aView.backgroundColor = [UIColor clearColor];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH - 30, 20)];
-        if (section == 1) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, SCREEN_WIDTH - 30, 20)];
+        if (section == 0) {
             label.text = @"常见症状解决方案";
         }
+          if (section==1){
+              label.text = @"药品分类";
+            }
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor darkGrayColor];
         [aView addSubview:label];
@@ -663,10 +671,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
+   
         return 26.0f;
-    }
-    return 0.0;
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -676,11 +683,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 1;
-    } else if (section == 1) {
-                return _datas.count < 1 ? 1 : _datas.count;
+                return _datas.count < 1 ? 2 : _datas.count+1;
         
-    } else {
+    }
+    
+   
+    else {
         return 1;
     }
 }
@@ -710,12 +718,12 @@
 //            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" forIndexPath:indexPath];
 //            return cell;
 //        }
-    
-    
-    if (indexPath.section == 0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell1" forIndexPath:indexPath];
-        return cell;
-    } else if (indexPath.section == 1) {
+     if (indexPath.section == 0) {
+         if (indexPath.row==2) {
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell1" forIndexPath:indexPath];
+                         return cell;
+         }
+         else{
         NSDictionary *dic;
         if (_datas.count > indexPath.row) {
             dic = _datas[indexPath.row];
@@ -729,13 +737,49 @@
         cell.tapAction = ^(YKSSpecial *special){
             [self performSegueWithIdentifier:@"gotoSplecialList" sender:special];
         };
+         
         return cell;
-    } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" forIndexPath:indexPath];
+             
+         }
+    } else if(indexPath.section==1){
+        
+        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"secondCell"];
+        
+        if (!cell) {
+            cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"secondCell"];
+
+            }
+
+    for (int i=0; i<8; i++) {
+        
+        UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [btn setImage:[UIImage imageNamed:@"icon"] forState:UIControlStateNormal];
+        
+        
+        btn.frame=CGRectMake(15+i%2*(SCREEN_WIDTH/2), 10+(i/2)*56, 35, 35);
+        
+        [btn addTarget:self action:@selector(sectionTwoClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        btn.tag=777+i;
+        
+        [cell.contentView addSubview:btn];
+
+    }
         return cell;
     }
+    else{
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" forIndexPath:indexPath];
+        cell.contentView.backgroundColor=[UIColor whiteColor];
+        return cell;
+    }  
+}
 
-    
+//药品分类点击事件
+
+-(void)sectionTwoClick:(UIButton *)btn{
+
+
 }
 
 #pragma mark - UITableViewDelegate
@@ -743,6 +787,50 @@
     if (indexPath.section == 2) {
         [YKSTools call:kServerPhone inView:self.view];
     }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    if (section==1) {
+        return 32;
+    }
+    return 0;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+
+    if (section==1) {
+        
+        UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 32)];
+        
+        UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [btn setTitle:@"更多药品分类" forState:UIControlStateNormal];
+        
+        btn.frame=CGRectMake((SCREEN_WIDTH-160)/2, 5, 160,22 );
+        
+        btn.titleLabel.font=[UIFont systemFontOfSize:11];
+        
+        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+
+        [view addSubview:btn];
+        
+        [btn addTarget:self action:@selector(gotoGrugListViewController) forControlEvents:UIControlEventTouchUpInside];
+        
+        view.backgroundColor=[UIColor whiteColor];
+        
+        return view;
+    }
+    return nil;
+    
+}
+
+-(void)gotoGrugListViewController{
+
+    YKSDrugCategoryListVC *list=[[YKSDrugCategoryListVC alloc]init];
+    
+    [self.navigationController pushViewController:list animated:YES];
+    
 }
 
 #pragma mark - imagePlayViewDelegate

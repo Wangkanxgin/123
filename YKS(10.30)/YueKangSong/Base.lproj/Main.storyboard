@@ -1639,7 +1639,7 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="0NP-SJ-H1E"/>
                                                 <constraint firstItem="mHS-Er-Hf4" firstAttribute="leading" secondItem="VC0-I1-ZlW" secondAttribute="leading" constant="12" id="45X-Z0-EUC"/>
@@ -1652,6 +1652,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="VC0-I1-ZlW" secondAttribute="trailing" id="2Sv-iE-fxK"/>
+                                        <constraint firstItem="VC0-I1-ZlW" firstAttribute="width" secondItem="0f2-oF-gAE" secondAttribute="width" id="fmR-q7-7Fw"/>
                                         <constraint firstAttribute="bottom" secondItem="VC0-I1-ZlW" secondAttribute="bottom" id="o99-ig-KxU"/>
                                         <constraint firstItem="VC0-I1-ZlW" firstAttribute="leading" secondItem="0f2-oF-gAE" secondAttribute="leading" id="siF-rl-i2k"/>
                                     </constraints>
@@ -1913,6 +1914,13 @@
                                                 <constraint firstAttribute="height" constant="76" id="zLL-vb-bT1"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-PV-9lT">
+                                            <rect key="frame" x="240" y="0.0" width="80" height="76"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="76" id="iD9-Re-ntR"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="d8d-dI-LDF" firstAttribute="top" secondItem="YKY-jg-Npy" secondAttribute="topMargin" constant="-8" id="8Er-3h-Pue"/>
@@ -1920,10 +1928,13 @@
                                         <constraint firstItem="d8d-dI-LDF" firstAttribute="leading" secondItem="YKY-jg-Npy" secondAttribute="leadingMargin" constant="-8" id="E1Y-js-LR6"/>
                                         <constraint firstItem="Rix-xB-Jye" firstAttribute="leading" secondItem="eIZ-eO-jer" secondAttribute="trailing" id="EKg-dz-dCT"/>
                                         <constraint firstItem="Rix-xB-Jye" firstAttribute="top" secondItem="YKY-jg-Npy" secondAttribute="topMargin" constant="-8" id="Grh-DM-Ws7"/>
+                                        <constraint firstItem="Iae-PV-9lT" firstAttribute="leading" secondItem="Rix-xB-Jye" secondAttribute="trailing" id="LZb-OJ-TeN"/>
+                                        <constraint firstItem="Iae-PV-9lT" firstAttribute="width" secondItem="YKY-jg-Npy" secondAttribute="width" multiplier="1:4" id="RBX-rG-rZX"/>
                                         <constraint firstItem="eIZ-eO-jer" firstAttribute="top" secondItem="YKY-jg-Npy" secondAttribute="topMargin" constant="-8" id="THn-gy-Vvj"/>
                                         <constraint firstItem="d8d-dI-LDF" firstAttribute="width" secondItem="YKY-jg-Npy" secondAttribute="width" multiplier="1:4" id="Xha-85-qp7"/>
                                         <constraint firstItem="eIZ-eO-jer" firstAttribute="leading" secondItem="d8d-dI-LDF" secondAttribute="trailing" id="beN-BI-scd"/>
                                         <constraint firstItem="Rix-xB-Jye" firstAttribute="width" secondItem="YKY-jg-Npy" secondAttribute="width" multiplier="1:4" id="hwm-4F-hHP"/>
+                                        <constraint firstItem="Iae-PV-9lT" firstAttribute="top" secondItem="YKY-jg-Npy" secondAttribute="topMargin" constant="-8" id="zFa-7R-v5e"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -5288,9 +5299,9 @@
         <image name="间接邀请.png" width="139" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jy8-um-db3"/>
-        <segue reference="X8J-kY-NHO"/>
-        <segue reference="9Mx-Ro-jNR"/>
+        <segue reference="vf7-oC-tuW"/>
+        <segue reference="nJg-Gs-NJj"/>
+        <segue reference="eF3-oG-hzd"/>
         <segue reference="1s7-o7-5rr"/>
         <segue reference="8Xj-f4-WUK"/>
         <segue reference="ZiF-fl-Tes"/>
