@@ -33,6 +33,8 @@
             return ;
         }
         if (ServerSuccess(responseObject)) {
+            
+            
             _datas = responseObject[@"data"][@"categorylist"];
             [self.tableView reloadData];
         } else {

@@ -747,7 +747,6 @@
         
         if (!cell) {
             cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"secondCell"];
-
             }
 
     for (int i=0; i<8; i++) {
@@ -755,7 +754,6 @@
         UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
         
         [btn setImage:[UIImage imageNamed:@"icon"] forState:UIControlStateNormal];
-        
         
         btn.frame=CGRectMake(15+i%2*(SCREEN_WIDTH/2), 10+(i/2)*56, 35, 35);
         
@@ -774,9 +772,7 @@
         return cell;
     }  
 }
-
 //药品分类点击事件
-
 -(void)sectionTwoClick:(UIButton *)btn{
 
 
@@ -822,26 +818,20 @@
         return view;
     }
     return nil;
-    
 }
 
 -(void)gotoGrugListViewController{
-
     YKSDrugCategoryListVC *list=[[YKSDrugCategoryListVC alloc]init];
     
     [self.navigationController pushViewController:list animated:YES];
-    
 }
-
 #pragma mark - imagePlayViewDelegate
 - (NSInteger)numberOfItems {
     return _imageURLStrings.count;
 }
-
 - (void)imagePlayerView:(ImagePlayerView *)imagePlayerView loadImageForImageView:(UIImageView *)imageView index:(NSInteger)index {
     [imageView sd_setImageWithURL:[NSURL URLWithString:_imageURLStrings[index][@"imgurl"]] placeholderImage:[UIImage imageNamed:@"defatul320"]];
 }
-
 - (void)imagePlayerView:(ImagePlayerView *)imagePlayerView didTapAtIndex:(NSInteger)index {
     
     if (![YKSUserModel isLogin]) {
@@ -866,16 +856,12 @@
         [self performSegueWithIdentifier:@"gotoYKSWebViewController" sender:_imageURLStrings[index]];
     }
 }
-
 //#pragma mark - UITableViewDelegate
-
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIViewController *aa = segue.destinationViewController;
     aa.hidesBottomBarWhenPushed = YES;
-    
     
     if ([segue.identifier isEqualToString:@"gotoSplecialList"]) {
         YKSSubSpecialListTableViewController *vc = segue.destinationViewController;
@@ -919,6 +905,4 @@
     }
     
 }
-
-
 @end

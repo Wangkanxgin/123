@@ -41,6 +41,9 @@
 
 }
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -70,9 +73,40 @@
      [self createTableView];
     
     [self loadData];
+    
+    [_searchBar resignFirstResponder];
+    
+    //注册键盘出现的通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardWasShow:) name:UIKeyboardWillShowNotification object:nil];
   
+    //注册键盘消失的通知
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyBoardBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    
    
 }
+
+//监听键盘的消失
+
+-(void)keyBoardBeHidden:(NSNotification *)noti{
+    
+    
+    
+  
+}
+
+//监听键盘的弹出
+-(void)keyBoardWasShow:(NSNotification *)noti{
+    
+    CGRect frame=[[[noti userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
+    
+    CGFloat height=frame.size.height;
+    
+    self.tableView.frame=CGRectMake(0, 0, SCREEN_WIDTH, SCRENN_HEIGHT-25-height);
+
+}
+
+
 
 -(void)search{
 
@@ -184,6 +218,10 @@
     return [_indexAarray objectAtIndex:section];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 20;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString*)title atIndex:(NSInteger)index
 {
     
@@ -193,10 +231,12 @@
 
 -(void)createTableView{
 
-    _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCRENN_HEIGHT-25) style:UITableViewStyleGrouped];
     
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    
+    
     
     _tableView.sectionIndexColor = [UIColor blueColor];
     _tableView.sectionIndexTrackingBackgroundColor = [UIColor grayColor];
