@@ -640,9 +640,9 @@
     if (indexPath.section == 0) {
         return 50;
     } else if (indexPath.section == 1) {
-        return 170;
+        return 76;
     } else {
-        return 84;
+        return 76;
     }
 }
 
