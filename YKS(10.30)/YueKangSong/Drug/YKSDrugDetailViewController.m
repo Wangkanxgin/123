@@ -110,6 +110,7 @@
                                          return ;
                                      }
                                      if (ServerSuccess(responseObject)) {
+                                         
                                          [sender setImage:[UIImage imageNamed:@"collect_normal"]
                                                  forState:UIControlStateNormal];
                                      } else {

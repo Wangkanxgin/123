@@ -5,7 +5,6 @@
 //  Created by gongliang on 15/5/26.
 //  Copyright (c) 2015年 YKS. All rights reserved.
 //
-
 #import "YKSSearchController.h"
 #import "YKSSearchBar.h"
 #import "YKSDrugListCell.h"
@@ -21,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
-
 @implementation YKSSearchController
 
 - (void)viewDidLoad {
@@ -29,8 +27,6 @@
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
     _searchBar.frame = CGRectMake(50, 0, SCREEN_WIDTH-100, 30);
     _searchBar.delegate = self;
-    
-    
     
     _searchBar.placeholder = @"搜索你的症状或药品名称";
     _searchBar.tintColor = kNavigationBar_back_color;
@@ -53,9 +49,7 @@
                                                                             target:nil
                                                                             action:nil];
 }
-
 -(void)viewWillAppear:(BOOL)animated{
-
     self.navigationController.navigationBar.hidden=NO;
 }
 
@@ -71,7 +65,6 @@
 
 - (void)requestDataByPage:(NSInteger)page {
 //    [self showProgress];
-
     [GZBaseRequest searchByKey:_searchBar.text
                           page:page
                       callback:^(id responseObject, NSError *error) {
@@ -110,7 +103,6 @@
     [self dismissViewControllerAnimated:YES completion:^{
     }];
 }
-
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
     

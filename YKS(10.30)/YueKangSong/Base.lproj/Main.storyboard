@@ -3631,7 +3631,7 @@
         <!--药品分类-->
         <scene sceneID="UQ2-8C-ZIo">
             <objects>
-                <tableViewController id="q2X-RW-34r" customClass="YKSDrugCategoryListVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="YKSDrugCategoryListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q2X-RW-34r" customClass="YKSDrugCategoryListVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="66" sectionHeaderHeight="10" sectionFooterHeight="10" id="5JT-07-lCw">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

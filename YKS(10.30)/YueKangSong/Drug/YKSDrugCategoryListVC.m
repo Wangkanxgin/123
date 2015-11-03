@@ -29,6 +29,8 @@
     
     [GZBaseRequest drugCategoryListCallback:^(id responseObject, NSError *error) {
         if (error) {
+            
+            
             [self showToastMessage:@"网络加载失败"];
             return ;
         }

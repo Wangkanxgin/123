@@ -28,6 +28,7 @@
 #import "YKSMyAddressViewcontroller.h"
 #import "YKSHomeTableViewCell1.h"
 #import "YKSDrugCategoryListVC.h"
+#import "YKSDrugListViewController.h"
 
 @interface YKSHomeTableViewController () <ImagePlayerViewDelegate,UIAlertViewDelegate,UIScrollViewDelegate>
 
@@ -45,6 +46,7 @@
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) UIPageControl *pageControl;
 
+@property(nonatomic,strong)NSArray *drugDatas;
 
 @property (weak, nonatomic) IBOutlet UIButton *addressBtn;
 
@@ -87,8 +89,35 @@
     
     
     [self setAddressBtnFrame];
+    
+    
+    [self requestDrugCategoryList];
+    
    
 
+}
+
+//请求药品类别列表数据
+
+-(void)requestDrugCategoryList{
+
+    [GZBaseRequest drugCategoryListCallback:^(id responseObject, NSError *error) {
+        if (error) {
+            [self showToastMessage:@"网络加载失败"];
+            return ;
+        }
+        if (ServerSuccess(responseObject)) {
+            
+            
+            _drugDatas = responseObject[@"data"][@"categorylist"];
+            
+        } else {
+            [self showToastMessage:responseObject[@"msg"]];
+        }
+        
+    }];
+
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -753,7 +782,7 @@
         
         UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
         
-        [btn setImage:[UIImage imageNamed:@"icon"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"default_icon_logo"] forState:UIControlStateNormal];
         
         btn.frame=CGRectMake(15+i%2*(SCREEN_WIDTH/2), 10+(i/2)*56, 35, 35);
         
@@ -774,6 +803,21 @@
 }
 //药品分类点击事件
 -(void)sectionTwoClick:(UIButton *)btn{
+    
+    NSInteger a=btn.tag-777;
+    
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    YKSDrugListViewController *vc=[story instantiateViewControllerWithIdentifier:@"YKSDrugListViewController"];
+    
+    
+    
+    NSDictionary *dic = _drugDatas[a];
+    vc.specialId = dic[@"id"];
+    vc.drugListType = YKSDrugListTypeCategory;
+    vc.title = dic[@"title"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 
 
 }
@@ -782,7 +826,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 2) {
         [YKSTools call:kServerPhone inView:self.view];
+       
     }
+    
+   
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -820,8 +867,12 @@
     return nil;
 }
 
+//点击更多药品分类
 -(void)gotoGrugListViewController{
-    YKSDrugCategoryListVC *list=[[YKSDrugCategoryListVC alloc]init];
+    
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    YKSDrugCategoryListVC *list=[story instantiateViewControllerWithIdentifier:@"YKSDrugCategoryListVC"];
     
     [self.navigationController pushViewController:list animated:YES];
 }
