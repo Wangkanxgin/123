@@ -54,6 +54,11 @@
                                                                             action:nil];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+
+    self.navigationController.navigationBar.hidden=NO;
+}
+
 #pragma mark - custom
 
 -(void)search{
