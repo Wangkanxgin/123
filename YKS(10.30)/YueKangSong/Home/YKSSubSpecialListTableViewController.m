@@ -12,6 +12,7 @@
 #import "GZBaseRequest.h"
 #import "YKSSpecial.h"
 #import "YKSDrugListViewController.h"
+#import "YKSRecommenViewController.h"
 
 @interface YKSSubSpecialListTableViewController ()
 
@@ -30,7 +31,7 @@
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         [bself requestSubSpecialList];
     }];
-    
+    self.navigationItem.title=@"";
 }
 
 #pragma mark - costom
@@ -79,17 +80,32 @@
     cell.contentLabel.text = subSpecial.specialDescription;
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    YKSRecommenViewController *recommenVC=[[YKSRecommenViewController alloc]init];
+    YKSSubSpecialCell *cell=[tableView cellForRowAtIndexPath:indexPath];
+    recommenVC.specialId = cell.subSpecial.specialId;
+    recommenVC.title=@"药师推荐方案";
+    recommenVC.formInformation.symptom=cell.subSpecial.title;
+    recommenVC.formInformation.symptomInformation=[NSString stringWithFormat:@"\t\t     %@",cell.subSpecial.specialDescription];
+//    recommenVC.drugListType = YKSDrugListTypeSpecail;
+    [self.navigationController pushViewController:recommenVC animated:YES];
+    
+    
+    
+    
+    
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    YKSDrugListViewController *drugListvc = segue.destinationViewController;
-    YKSSubSpecialCell *cell = (YKSSubSpecialCell *)sender;
-    drugListvc.specialId = cell.subSpecial.specialId;
-    drugListvc.title = cell.subSpecial.title;
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    YKSDrugListViewController *drugListvc = segue.destinationViewController;
+//    YKSSubSpecialCell *cell = (YKSSubSpecialCell *)sender;
+//    drugListvc.specialId = cell.subSpecial.specialId;
+//    drugListvc.title = cell.subSpecial.title;
+//}
 
 
 @end
