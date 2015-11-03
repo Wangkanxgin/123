@@ -2261,7 +2261,6 @@
                                     <outlet property="bgView" destination="AxG-yd-mMp" id="WNO-2v-oJW"/>
                                     <outlet property="contentLabel" destination="SCt-u4-UdO" id="oEw-hf-hQg"/>
                                     <outlet property="titleLabel" destination="rCH-ZL-ela" id="6mq-hG-1Dt"/>
-                                    <segue destination="DyS-Oe-SHg" kind="push" id="9Mx-Ro-jNR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -4167,7 +4166,7 @@
         <!--购物车-->
         <scene sceneID="kOC-eI-4rT">
             <objects>
-                <viewController id="GgF-ak-ED0" customClass="YKSShoppingCartVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YKSShoppingCartVC" id="GgF-ak-ED0" customClass="YKSShoppingCartVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nlm-Wk-yyk"/>
                         <viewControllerLayoutGuide type="bottom" id="t5v-hR-jnv"/>
@@ -5299,13 +5298,12 @@
         <image name="间接邀请.png" width="139" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vf7-oC-tuW"/>
+        <segue reference="1s7-o7-5rr"/>
         <segue reference="nJg-Gs-NJj"/>
         <segue reference="eF3-oG-hzd"/>
-        <segue reference="1s7-o7-5rr"/>
         <segue reference="8Xj-f4-WUK"/>
-        <segue reference="ZiF-fl-Tes"/>
-        <segue reference="yPI-Be-LDN"/>
+        <segue reference="ena-Hn-kQg"/>
+        <segue reference="7Og-FC-yn7"/>
         <segue reference="3mk-1C-4Cj"/>
     </inferredMetricsTieBreakers>
 </document>

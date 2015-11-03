@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1EF4EA1BE8943200217BA8 /* EachGroupDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4D91BE8943200217BA8 /* EachGroupDetail.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4EB1BE8943200217BA8 /* YKSDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4DB1BE8943200217BA8 /* YKSDetails.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4EC1BE8943200217BA8 /* YKSFormInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4DD1BE8943200217BA8 /* YKSFormInformation.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4ED1BE8943200217BA8 /* YKSFormViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4DF1BE8943200217BA8 /* YKSFormViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4EE1BE8943200217BA8 /* YKSOneBuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4E11BE8943200217BA8 /* YKSOneBuyCell.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4EF1BE8943200217BA8 /* YKSPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4E31BE8943200217BA8 /* YKSPlanCell.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4F01BE8943200217BA8 /* YKSPlanDisPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4E51BE8943200217BA8 /* YKSPlanDisPlayCell.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4F11BE8943200217BA8 /* YKSRecommenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4E71BE8943200217BA8 /* YKSRecommenViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1C1EF4F21BE8943200217BA8 /* YKSReleaseButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EF4E91BE8943200217BA8 /* YKSReleaseButtonCell.m */; settings = {ASSET_TAGS = (); }; };
 		1ED2C060D59F1070CB6AEE4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69E6ED74E7E95007A91D6BA /* libPods.a */; };
 		3153B7C21BA91DC700C60EF0 /* gmanual.png in Resources */ = {isa = PBXBuildFile; fileRef = 3153B7C11BA91DC700C60EF0 /* gmanual.png */; };
 		31659EB51BA021FB00F65F3A /* YKSDrugShuoMingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31659EB41BA021FB00F65F3A /* YKSDrugShuoMingViewController.m */; };
@@ -192,6 +201,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C1EF4D81BE8943200217BA8 /* EachGroupDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EachGroupDetail.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/EachGroupDetail.h"; sourceTree = "<group>"; };
+		1C1EF4D91BE8943200217BA8 /* EachGroupDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EachGroupDetail.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/EachGroupDetail.m"; sourceTree = "<group>"; };
+		1C1EF4DA1BE8943200217BA8 /* YKSDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSDetails.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSDetails.h"; sourceTree = "<group>"; };
+		1C1EF4DB1BE8943200217BA8 /* YKSDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSDetails.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSDetails.m"; sourceTree = "<group>"; };
+		1C1EF4DC1BE8943200217BA8 /* YKSFormInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSFormInformation.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSFormInformation.h"; sourceTree = "<group>"; };
+		1C1EF4DD1BE8943200217BA8 /* YKSFormInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSFormInformation.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSFormInformation.m"; sourceTree = "<group>"; };
+		1C1EF4DE1BE8943200217BA8 /* YKSFormViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSFormViewCell.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSFormViewCell.h"; sourceTree = "<group>"; };
+		1C1EF4DF1BE8943200217BA8 /* YKSFormViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSFormViewCell.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSFormViewCell.m"; sourceTree = "<group>"; };
+		1C1EF4E01BE8943200217BA8 /* YKSOneBuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSOneBuyCell.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSOneBuyCell.h"; sourceTree = "<group>"; };
+		1C1EF4E11BE8943200217BA8 /* YKSOneBuyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSOneBuyCell.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSOneBuyCell.m"; sourceTree = "<group>"; };
+		1C1EF4E21BE8943200217BA8 /* YKSPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSPlanCell.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSPlanCell.h"; sourceTree = "<group>"; };
+		1C1EF4E31BE8943200217BA8 /* YKSPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSPlanCell.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSPlanCell.m"; sourceTree = "<group>"; };
+		1C1EF4E41BE8943200217BA8 /* YKSPlanDisPlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSPlanDisPlayCell.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSPlanDisPlayCell.h"; sourceTree = "<group>"; };
+		1C1EF4E51BE8943200217BA8 /* YKSPlanDisPlayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSPlanDisPlayCell.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSPlanDisPlayCell.m"; sourceTree = "<group>"; };
+		1C1EF4E61BE8943200217BA8 /* YKSRecommenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSRecommenViewController.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSRecommenViewController.h"; sourceTree = "<group>"; };
+		1C1EF4E71BE8943200217BA8 /* YKSRecommenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSRecommenViewController.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSRecommenViewController.m"; sourceTree = "<group>"; };
+		1C1EF4E81BE8943200217BA8 /* YKSReleaseButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSReleaseButtonCell.h; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSReleaseButtonCell.h"; sourceTree = "<group>"; };
+		1C1EF4E91BE8943200217BA8 /* YKSReleaseButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSReleaseButtonCell.m; path = "../../../YKS(10.08)最终版/YKS(9.24 /YueKangSong/Home/YKSReleaseButtonCell.m"; sourceTree = "<group>"; };
 		3153B7C11BA91DC700C60EF0 /* gmanual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gmanual.png; sourceTree = "<group>"; };
 		31659EB31BA021FB00F65F3A /* YKSDrugShuoMingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSDrugShuoMingViewController.h; sourceTree = "<group>"; };
 		31659EB41BA021FB00F65F3A /* YKSDrugShuoMingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSDrugShuoMingViewController.m; sourceTree = "<group>"; };
@@ -483,6 +510,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C1EF4D71BE893FE00217BA8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				1C1EF4D81BE8943200217BA8 /* EachGroupDetail.h */,
+				1C1EF4D91BE8943200217BA8 /* EachGroupDetail.m */,
+				1C1EF4DA1BE8943200217BA8 /* YKSDetails.h */,
+				1C1EF4DB1BE8943200217BA8 /* YKSDetails.m */,
+				1C1EF4DC1BE8943200217BA8 /* YKSFormInformation.h */,
+				1C1EF4DD1BE8943200217BA8 /* YKSFormInformation.m */,
+				1C1EF4DE1BE8943200217BA8 /* YKSFormViewCell.h */,
+				1C1EF4DF1BE8943200217BA8 /* YKSFormViewCell.m */,
+				1C1EF4E01BE8943200217BA8 /* YKSOneBuyCell.h */,
+				1C1EF4E11BE8943200217BA8 /* YKSOneBuyCell.m */,
+				1C1EF4E21BE8943200217BA8 /* YKSPlanCell.h */,
+				1C1EF4E31BE8943200217BA8 /* YKSPlanCell.m */,
+				1C1EF4E41BE8943200217BA8 /* YKSPlanDisPlayCell.h */,
+				1C1EF4E51BE8943200217BA8 /* YKSPlanDisPlayCell.m */,
+				1C1EF4E61BE8943200217BA8 /* YKSRecommenViewController.h */,
+				1C1EF4E71BE8943200217BA8 /* YKSRecommenViewController.m */,
+				1C1EF4E81BE8943200217BA8 /* YKSReleaseButtonCell.h */,
+				1C1EF4E91BE8943200217BA8 /* YKSReleaseButtonCell.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		3178B8C71BA6A6D200B390E4 /* mine */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +647,7 @@
 		3E2A10EE1B01F3BA00DE1E4C /* YueKangSong */ = {
 			isa = PBXGroup;
 			children = (
+				1C1EF4D71BE893FE00217BA8 /* New Group */,
 				3EFFB6A51B25689600692CAA /* YueKangSong.entitlements */,
 				3E2A10F31B01F3BA00DE1E4C /* YKSAppDelegate.h */,
 				3E2A10F41B01F3BA00DE1E4C /* YKSAppDelegate.m */,
@@ -1276,10 +1329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1EF4EE1BE8943200217BA8 /* YKSOneBuyCell.m in Sources */,
 				3E9C46121B058B84009CAC1D /* YKSTools.m in Sources */,
+				1C1EF4F11BE8943200217BA8 /* YKSRecommenViewController.m in Sources */,
 				3E958EBF1B1453CA00A18783 /* YKSSearchController.m in Sources */,
 				3E958EC21B145BA000A18783 /* YKSSearchBar.m in Sources */,
 				3E9C465F1B08399D009CAC1D /* YKSAddressListViewController.m in Sources */,
+				1C1EF4EA1BE8943200217BA8 /* EachGroupDetail.m in Sources */,
 				3E9C45F41B046635009CAC1D /* YKSSubSpecialCell.m in Sources */,
 				F3499F8E1B9D204700B5D07B /* YKSUserViewController.m in Sources */,
 				578D81A81BE30D1700DCFF4B /* YKSHomeTableViewCell1.m in Sources */,
@@ -1297,6 +1353,7 @@
 				31659EB51BA021FB00F65F3A /* YKSDrugShuoMingViewController.m in Sources */,
 				3E9C46261B0618C9009CAC1D /* YKSHomeTableViewController.m in Sources */,
 				3EF6393E1B15CF0300858F3E /* YKSCouponListCell.m in Sources */,
+				1C1EF4F01BE8943200217BA8 /* YKSPlanDisPlayCell.m in Sources */,
 				57C284A91BBB84640038AED9 /* YKSFMDBManger.m in Sources */,
 				3EFB3CA61B158B3F00107809 /* YKSCloseButton.m in Sources */,
 				57B3EF471BBB82DE004F76F7 /* YKSRunningManViewController.m in Sources */,
@@ -1304,6 +1361,7 @@
 				575CB0721BA7B90F002578ED /* pinyin.c in Sources */,
 				3E2705D71B02DBCE00FC6010 /* GZHTTPClient.m in Sources */,
 				3E9C46411B0725A6009CAC1D /* YKSShoppingCartVC.m in Sources */,
+				1C1EF4EF1BE8943200217BA8 /* YKSPlanCell.m in Sources */,
 				3E9C46111B058B84009CAC1D /* YKSConstants.m in Sources */,
 				3E9C45FA1B04C65C009CAC1D /* YKSDrug.m in Sources */,
 				3E67566E1B1BEB0F00CE946D /* YKSAboutViewController.m in Sources */,
@@ -1321,9 +1379,11 @@
 				F31001A11B94369A00E1C822 /* YKSYQMTableViewController.m in Sources */,
 				3E9C46631B08399D009CAC1D /* YKSAddressListCell.m in Sources */,
 				57C284A31BBB84490038AED9 /* FMDatabaseAdditions.m in Sources */,
+				1C1EF4EC1BE8943200217BA8 /* YKSFormInformation.m in Sources */,
 				3ECFDFE31B1C69980014899F /* YKSWebViewController.m in Sources */,
 				3E9C46291B06191E009CAC1D /* YKSDrugCategoryListVC.m in Sources */,
 				3E6756741B1C29B600CE946D /* YKSMsgTableViewController.m in Sources */,
+				1C1EF4ED1BE8943200217BA8 /* YKSFormViewCell.m in Sources */,
 				3E2705D61B02DBCE00FC6010 /* GZBaseRequest.m in Sources */,
 				57A4B97E1BD8B91400EE29FC /* YKSMyAddressViewcontroller.m in Sources */,
 				3E958EA81B12B45F00A18783 /* YKSShoppingCartBuyVC.m in Sources */,
@@ -1335,6 +1395,7 @@
 				3E18E9E31B5F51E6008ACC2D /* YKSSearchStreetVC.m in Sources */,
 				3E8905471B03515C00ACF5AD /* YKSUserModel.m in Sources */,
 				3EFFB7421B2860EF00692CAA /* YKSMyHealthViewController.m in Sources */,
+				1C1EF4EB1BE8943200217BA8 /* YKSDetails.m in Sources */,
 				3E2705AE1B022AC000FC6010 /* YKSQRCodeViewController.m in Sources */,
 				F3D967FB1B9C492500309831 /* YKSTableViewController.m in Sources */,
 				3EA119DF1B0B74240073949F /* YKSShoppingCartListCell.m in Sources */,
@@ -1359,6 +1420,7 @@
 				3E9C45F11B046353009CAC1D /* YKSSubSpecialListTableViewController.m in Sources */,
 				3E958EAB1B12B79800A18783 /* YKSShoppingCartBuyCell.m in Sources */,
 				3E9C45F71B047E95009CAC1D /* YKSDrugListViewController.m in Sources */,
+				1C1EF4F21BE8943200217BA8 /* YKSReleaseButtonCell.m in Sources */,
 				3EA119EB1B0E0E920073949F /* YKSBuyCell.m in Sources */,
 				3E958EB81B135C2600A18783 /* YKSSelectAddressListCell.m in Sources */,
 				3E9C46611B08399D009CAC1D /* YKSMyViewController.m in Sources */,
